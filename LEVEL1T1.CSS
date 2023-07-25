@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --text: 1.5rem;
+    --head:calc(1rem + 5vw );
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+   padding: 0rem 1rem ;
+   transform: translateY(-100%);
+   animation: movedown 850ms ease-in 1s forwards;
+}
+@keyframes movedown{
+    from{
+        transform: translateY(-100%);
+    }to{
+        transform: translateY(0%);
+    }
+}
+
+.navbar ul{
+    list-style: none;
+    
+}
+.navbar li{
+  display: inline-block;
+    margin-left: 3rem;
+    list-style:none ;
+    font-size: var(--text);
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+.hero-secation{
+    min-height: 100vh;
+    color:white;
+    background: 
+    linear-gradient(black ,transparent),url("gymbackground\ image.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: slide 1s ease-in-out;
+}
+.herotext a{
+ text-decoration: none;
+ color: white;
+ background-color: rgb(131, 248, 5);
+ font-weight: 900;
+ padding: 0.8rem 1rem;
+ font-size: var(--text);
+ border-radius: 0.8rem;
+ 
+}
+.herotext{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+@keyframes slide{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+.herotext h2{
+    font-size: var(--head);
+}
+.herotext p{
+    font-size: 3rem;
+}
+.herotext a:hover{
+    border:0.01rem solid;
+    border-color: rgb(131, 248, 5);
+    background-color:black;
+    transition: opacity 250ms linear;
+}
+.navbar  li a:hover{
+border-bottom: 2px solid;
+}
+
